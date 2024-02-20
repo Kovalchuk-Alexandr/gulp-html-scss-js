@@ -1,0 +1,35 @@
++ gulp server
++ ~~~~
++ CategoryInfo : ObjectNotFound: (gulp:String) [], CommandNotFoundException
++ FullyQualifiedErrorId : CommandNotFoundException
+
+Решение-1:
+1) Установите gulp в терминале. Если gulp установлен через npm install gulp, то попробуйте установить gulp глобально - npm install -g gulp.
+2) Открываем терминал от админа.
+Пишем и запускаем: Set-ExecutionPolicy RemoteSigned
+На вопрос отвечаем: Да (Да для всех)
+3) Затем снова в терминале пишете команду gulp
+
+Решение-2:
+Это политика безопасности в винде, запрещает исполнение скриптов с расширением ps.
+
+Надо выполнить в терминале
+Get-ExecutionPolicy -List
+посмотреть какие политики установлены
+
+Если вышло так:
+
+Scope ExecutionPolicy
+----- ---------------
+MachinePolicy     Undefined
+UserPolicy          Undefined
+Process              Undefined
+CurrentUser        Undefined
+LocalMachine      Undefined
+
+выполнить следующее:
+В терминале прописать: 
+ 
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+нажать Enter
