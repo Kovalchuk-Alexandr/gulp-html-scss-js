@@ -63,13 +63,43 @@ npm i gulp-imagemin@7 --save-dev
 Ускорение сборки
 
 npm install --save-dev gulp-changed
+"gulp-changed": "4.0.3", - чтобы работал со старой версией
+const changed = require('gulp-changed');
 
 - использование в картинках, HTML, JS, CSS
 
 
 ----------------------------------------------------------------------
+// Автоматически подключает все scss-блоки в 'main.scss'
 
+npm i gulp-sass-glob --save-dev
 
+----------------------------------------------------------------------
+// Autoprefixer (-webkit)
+
+npm install --save-dev gulp-autoprefixer
+
+----------------------------------------------------------------------
+
+// Минификация CSS. gulp-csso 
+npm install gulp-csso --save-dev
+
+//CSS
+const csso = require('gulp-csso');
+
+----------------------------------------------------------------------
+
+// Минификация HTML
+npm install gulp-htmlclean --save-dev
+
+//CSS
+htmlclean = require('gulp-htmlclean');
+
+----------------------------------------------------------------------
 web-p
 
 npm i gulp-webp gulp-webp-html gulp-webp-css --save-dev
+
+gulp-web - конвертирует изображения в webp
+gulp-webp-html - добавляет <picture> в 'html'
+gulp-webp-css - добавляет @supports фоновых изображений

@@ -1,0 +1,13 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--page-bg);
+	color: var(--text-color);
+    font-family: var(--font-main);
+}
+
+* {
+    /* border: 1px solid lightgray; */
+}

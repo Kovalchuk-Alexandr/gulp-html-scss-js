@@ -1,0 +1,16 @@
+/* Blocks
+@import './blocks/header';
+@import './blocks/footer'; */
+
+/* Заменяем одним сборщиком */
+@import './blocks/**/*.scss';
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('./../img/02.jpg');
+    background-size: cover;
+}
